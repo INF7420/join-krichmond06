@@ -32,10 +32,50 @@
 
   <main>
     <h2>Contact Me</h2>
-    <img class="contact" src="images/selfphotoflyfish.jpg" alt="photo of katie richmond dressed in fly fishing gear and standing on a paved path with trees in background"/>
-  </main>
+    <form action="https://formspree.io/krichmond@wayne.edu" method="POST" data-validate>
+
+      <div>
+        <label for="name">Name:
+        <input type="text" id="name" name="name" class="form-input">
+        </label>
+      </div>
+
+      <div>
+        <label for="email">Email:
+        <input type="email" id="email" name="_replyto" class="form-input" required>
+        </label>
+      </div>
+
+      <div>
+        <label for="message">Message:
+        <textarea id="message" name="message" class="form-input" required></textarea>
+        </label>
+      </div>
+
+      <div class="button">
+        <button type="submit">Send</button>
+      </div>
+
+      <input type="hidden" name="_next" value="https://inf7420.github.io/richmond-project/thanks.html" />
+
+    </form>
+
+  <img src="images/selfphotoflyfish.jpg" alt="photo of katie richmond dressed in fly fishing gear and standing on a paved path with trees in background"/>
+
+  <p>Thanks for visiting my page!</p>
+
+</main>
+
+<script
+src="https://cdn.jsdelivr.net/gh/cferdinandi/validate@2.2.0/dist/validate.min.js">
+</script>
+
+<script>
+validate.init();
+</script>
 
   <footer>
+
     <ul class="footer-info">
         <li>Contact Me</li>
         <li>Follow Me</li>
@@ -56,7 +96,8 @@
           </a>
         </li>
     </ul>
-   </footer>
+
+  </footer>
 
   </body>
 
