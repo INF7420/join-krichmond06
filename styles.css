@@ -4,21 +4,66 @@
   padding: 1px 5px;
 }
 
-.main-nav ul {
+.nav {
   list-style: none;
   text-align: center;
   padding: 0;
 }
 
 .main-nav li {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.main-nav ul li {
   font-family: 'Aladin', cursive;
-  font-size: 2em;
   color: #FFF;
   line-height: 50px;
   height: 50px;
   background-color: #000;
+  position: relative;
 }
 
+.main-nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  transition: .3s;
+  padding: 0 1em;
+}
+
+.main-nav ul li ul {
+  display: none;
+  position:absolute;
+  background: #000000;
+  padding:0px;
+  text-align: center;
+}
+
+.main-nav ul li:hover ul {
+  display: block;
+  text-align: center;
+}
+
+.main-nav ul li ul li {
+  font-family: 'Aladin', cursive;
+  font-size: 1em;
+  color: #FFF;
+  line-height: 50px;
+  height: 50px;
+  background-color: #000;
+  position: relative;
+}
+
+.main-nav ul li ul li a{
+  padding: 0;
+}
+
+.main-nav ul li ul li a:hover{
+  background-color:  rgba(78, 177, 127, 0.856);
+  padding: 1px 1px;
+  text-align: center;
+}
 .main-nav .logo {
 display:inline;
 }
@@ -51,6 +96,81 @@ display:inline;
     margin-right: -5px;
     padding: 0 .5em;
   }
+  .main-nav ul li {
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 2em;
+    display: inline-block;
+    margin-right: 0px;
+    padding: 0 .5em;
+  }
+  .main-nav ul li ul {
+    display: none;
+    position:absolute;
+    background: #000000;
+    padding:0px;
+    text-align: center;
+  }
+
+  .main-nav ul li:hover ul {
+    display: block;
+    text-align: center;
+  }
+
+  .main-nav ul li ul li {
+    font-family: 'Aladin', cursive;
+    font-size: 1em;
+    color: #FFF;
+    line-height: 50px;
+    height: 50px;
+    background-color: #000;
+    position: none;
+  }
+
+  .main-nav ul li ul li a{
+    padding: 0;
+  }
+
+  .main-nav ul li ul li a:hover{
+    background-color:  rgba(78, 177, 127, 0.856);
+    padding: 1px 1px;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+.main-nav ul li ul {
+  display: none;
+  position: relative;
+  background: #000000;
+  padding: 50px 2px 2px 2px;
+  text-align: center;
+}
+
+.main-nav ul li:hover ul {
+  display: list;
+  text-align: center;
+}
+
+.main-nav ul li ul li {
+  font-family: 'Aladin', cursive;
+  font-size: 1em;
+  color: #FFF;
+  line-height: 50px;
+  height: 50px;
+  background-color: #000;
+  position: relative;
+}
+
+.main-nav ul li ul li a{
+  padding: 0;
+}
+
+.main-nav ul li ul li a:hover{
+  background-color:  rgba(78, 177, 127, 0.856);
+  padding: 1px 1px;
+  text-align: center;
+}
 }
 
 body {
@@ -127,7 +247,8 @@ main {
 #library,
 #national-service,
 #community-service,
-#education {
+#education
+ {
   margin: 5px;
   border: 4px double #000;
   padding: 10px 10px;
@@ -225,6 +346,7 @@ footer {
   display: inline-block;
   text-align: center;
   margin: 55px 20px 0px 30px;
+  padding:5px;
 }
 
 .footer-buttons ul {
@@ -255,28 +377,25 @@ footer {
   #library,
   #national-service,
   #community-service,
-  #education {
+  #education
+ {
     width: calc(50% - 13px);
     min-height: 495px;
   }
+
+  .footer-info li {
+   margin: 5px 2px 0px 3px;
+}
 }
 
-@media (min-width: 860px) {
-  main {
-    width: 860px;
+@media (max-width: 500px) {
+
+    .footer-info li {
+      margin: 5px 2px 0px 3px;
+    }
   }
 
-  #intro,
-  img.intro {
-    width: 400px;
-    height: 450px;
+  .canva-embed {
+  width:50%;
+  float:left;
   }
-
-  #library,
-  #national-service,
-  #community-service,
-  #education {
-    width: calc(50% - 13px);
-    min-height: 495px;
-  }
-}
